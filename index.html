@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="flex-between">
+      <nav class="nav-page flex-between">
+        <div class="hamburger">
+          <img src="./images/icon-menu.svg" alt="menu-icon" />
+        </div>
+
+        <a href="./">
+          <img src="./images/logo.svg" alt="logo" />
+        </a>
+
+        <div class="link">
+          <div class="back">
+            <button type="button" class="close">
+              <img src="./images/icon-close.svg" alt="close" />
+            </button>
+            <a href="#collections">Collection</a>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <nav class="nav-user flex-between">
+        <button type="button"  class="cart-icon">
+          <img src="./images/icon-cart.svg" alt="cart-icon" />
+        <div class="cart-icon__amount">3</div>
+        </button>
+
+        <div class="cart-container">
+          <div class="cart-container__label">
+            Cart
+          </div>
+          <div class="cart-container__content">
+            <div class="cart-empty">Your cart is empty.</div>
+            <div class="cart-product-container">
+
+              <div class="cart-product">
+                
+                <div>
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="product-image" />
+                </div>
+                <div>
+                  <div class="cart-product__name">Autumn Limited Edition...</div>
+                  <div class="cart-product__price">
+                    <span class="actual-price">$125.00</span>
+                    x
+                    <span class="quantity-product">3 </span>
+                    <span class="total-price">$375.00 </span>
+                  </div>
+                </div>
+                <button class="delete-button" type="button">
+                  <img src="./images/icon-delete.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <button type="button" class="checkout-button">Checkout</button>
+          </div>
+          </div>
+        </div>
+        <div class="profile">
+          <a href="#profile">
+            <img src="./images/image-avatar.png" alt="profile-image" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <section class="product-image"></section>
+    <main></main>
+    <section class="payment"></section>
+
+    <!-- Collections Men Women About Contact Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can
+    offer. $125.00 50% $250.00 0 Add to cart -->
+
+    <!-- <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div> -->
+  </body>
+</html>
