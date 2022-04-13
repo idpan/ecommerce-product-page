@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./navbar.css">
-    
+    <link rel="stylesheet" href="./product-image.css">
 
     <title>Frontend Mentor | E-commerce product page</title>
 
@@ -23,8 +23,7 @@
       }
     </style>
   </head>
-  <body>
-  
+  <body> 
     <header class="flex-between">
       <nav class="nav-page flex-between">
         <button class="hamburger">
@@ -41,7 +40,6 @@
               <img src="./images/icon-close.svg" alt="close" />
             </button>
             <div>
-
               <a href="#collections">Collection</a>
               <a href="#men">Men</a>
               <a href="#women">Women</a>
@@ -95,7 +93,19 @@
         </div>
       </nav>
     </header>
-    <section class="product-image"></section>
+    <section class="product-image">
+      <div class="product-image__hero">
+        <button type="button" class="slide-btn" data-slide="left"></button>      
+        <img src="./images/image-product-1.jpg" alt="product-image" class="product-image__image">
+        <button type="button" class="slide-btn" data-slide="right"></button> 
+      </div>
+      <div class="product-image__thumbnail">
+        <button class="active-thumbnail" type="button" data-index="0"><img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail-1" ></button>
+        <button type="button" data-index="1"><img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail-2" ></button>
+        <button type="button" data-index="2"><img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail-3" ></button>
+        <button type="button" data-index="3"><img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail-4" ></button>
+     
+    </section>
     <main></main>
     <section class="payment"></section>
 

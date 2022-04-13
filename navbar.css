@@ -4,13 +4,14 @@ nav.nav-user {
   align-items: center;
 }
 header {
+  background-color: var(--background-primary-color);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 4.25rem;
   padding: 0 1.5rem;
-  border-bottom: 1px solid #000;
+  z-index: 99;
 }
 header .profile img {
   object-fit: contain;
