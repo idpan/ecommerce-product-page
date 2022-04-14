@@ -1,54 +1,61 @@
 .product-image__hero {
   margin-top: 4.25rem;
-  width: 100vw;
-  height: 80vw;
-  max-width: 27.8rem;
-  max-height: 27.8rem;
-  object-position: t;
+  width: max-content;
   object-fit: contain;
   display: flex;
   align-items: center;
-  overflow: hidden;
   position: relative;
 }
-.product-image__hero > img {
+.product-image__image {
+  overflow: hidden;
+  width: 100vw;
+  height: auto;
+  max-width: 27.8rem;
+  max-height: 27.8rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.product-image__image > img {
   width: 100%;
-  object-fit: contain;
+  height: auto;
 }
 .product-image__hero > button {
-  width: 40px;
-  height: 40px;
   background-color: white;
   border-radius: 100%;
   position: absolute;
-  margin: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.product-image__hero > button > * {
 }
 .product-image__hero button[data-slide="left"] {
-  left: 0;
-  background-image: url(./images/icon-previous.svg);
+  left: 20px;
 }
 .product-image__hero button[data-slide="right"] {
-  right: 0;
-  background-image: url(./images/icon-next.svg);
+  right: 20px;
 }
 .product-image__thumbnail button {
   border: 2px solid transparent;
 }
 .product-image__thumbnail button:hover {
-  opacity: 0.5;
 }
 .active-thumbnail {
   border-color: var(--primary-color) !important;
+  background-color: white;
 }
 .active-thumbnail img {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 @media (max-width: 600px) {
   .product-image__thumbnail {
     display: none;
+  }
+  .product-image__image {
+    border-radius: 0;
+    max-width: 100vw;
   }
 }
 @media (min-width: 600px) {
@@ -60,8 +67,11 @@
     border-radius: 0.7rem;
     margin-top: 12.7rem;
   }
+  .product-image .product-image__image {
+    cursor: zoom-in;
+  }
 
-  .product-image__hero > button {
+  .product-image .product-image__hero > button {
     display: none;
   }
   .product-image__thumbnail {

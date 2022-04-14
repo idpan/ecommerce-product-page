@@ -25,24 +25,43 @@ cartBtn.onclick = () => {
 
 // product image
 const imageForHero = ["image-product-1.jpg", "image-product-2.jpg", "image-product-3.jpg", "image-product-4.jpg"];
-const imageProduct = document.querySelector(".product-image__hero > img");
+const imageProduct = document.querySelectorAll(".product-image__image > img");
 const slider = document.querySelectorAll(".product-image__hero > button");
-const thunbnail = document.querySelectorAll(".product-image__thumbnail > button");
+const thumbnail = document.querySelectorAll(".product-image__thumbnail > button");
 let imageProductIndex = 0;
 slider.forEach((element) => {
   element.onclick = function () {
     imageProductIndex = setImageProductIndex(this.dataset.slide, imageProductIndex);
+    imageProduct.forEach((element) => {
+      element.setAttribute("src", `./images/${imageForHero[imageProductIndex]}`);
+    });
+    document.querySelectorAll(".active-thumbnail").forEach((element) => {
+      element.classList.remove("active-thumbnail");
+    });
 
-    imageProduct.setAttribute("src", `./images/${imageForHero[imageProductIndex]}`);
+    thumbnail.forEach((element) => {
+      if (parseInt(element.dataset.index) !== imageProductIndex) return;
+
+      element.classList.add("active-thumbnail");
+    });
   };
 });
 
-thunbnail.forEach((element) => {
+thumbnail.forEach((element) => {
   element.onclick = function () {
-    console.log(this);
-    imageProduct.setAttribute("src", `./images/${imageForHero[this.dataset.index]}`);
-    document.querySelector(".active-thumbnail").classList.remove("active-thumbnail");
-    this.classList.add("active-thumbnail");
+    imageProductIndex = parseInt(this.dataset.index);
+
+    imageProduct.forEach((element) => {
+      element.setAttribute("src", `./images/${imageForHero[imageProductIndex]}`);
+    });
+    document.querySelectorAll(".active-thumbnail").forEach((element) => {
+      element.classList.remove("active-thumbnail");
+    });
+    thumbnail.forEach((element) => {
+      if (parseInt(element.dataset.index) !== imageProductIndex) return;
+
+      element.classList.add("active-thumbnail");
+    });
   };
 });
 
@@ -60,3 +79,18 @@ function setImageProductIndex(slideButton, imageProductIndex) {
     return (imageProductIndex += 1);
   }
 }
+
+// preview
+const preview = document.querySelector(".preview");
+const previewCloseBtn = document.querySelector(".preview__close");
+imageProduct.forEach((element) => {
+  element.onclick = function () {
+    if (window.innerWidth >= 600) {
+      preview.style.display = "flex";
+    }
+  };
+});
+
+previewCloseBtn.onclick = function () {
+  preview.style.display = "none";
+};
