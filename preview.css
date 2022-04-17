@@ -43,7 +43,9 @@
   width: 56px;
   height: 56px;
 }
-
+.preview__element .slide-btn:hover {
+  background-color: rgb(238, 238, 238);
+}
 .preview__element .slide-btn[data-slide="left"] {
   left: -28px;
 }

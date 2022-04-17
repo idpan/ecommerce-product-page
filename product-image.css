@@ -1,5 +1,4 @@
 .product-image__hero {
-  margin-top: 4.25rem;
   width: max-content;
   object-fit: contain;
   display: flex;
@@ -29,8 +28,6 @@
   width: 40px;
   height: 40px;
 }
-.product-image__hero > button > * {
-}
 .product-image__hero button[data-slide="left"] {
   left: 20px;
 }
@@ -41,6 +38,7 @@
   border: 2px solid transparent;
 }
 .product-image__thumbnail button:hover {
+  opacity: 0.5;
 }
 .active-thumbnail {
   border-color: var(--primary-color) !important;
@@ -65,7 +63,6 @@
   }
   .product-image__hero {
     border-radius: 0.7rem;
-    margin-top: 12.7rem;
   }
   .product-image .product-image__image {
     cursor: zoom-in;

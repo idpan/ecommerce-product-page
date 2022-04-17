@@ -26,7 +26,8 @@ a {
   text-decoration: none;
   color: var(--text-secondary-color);
 }
-img {
+img,
+svg {
   display: block;
 }
 button {
@@ -52,4 +53,28 @@ b {
 }
 .open-link {
   display: block !important;
+}
+.container-content {
+  margin-top: 4.25rem;
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .container-content {
+    margin-top: 9.7rem;
+  }
+}
+
+@media (min-width: 991px) {
+  .container-content {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1199px) {
+  .container-content {
+    gap: 7rem;
+  }
 }

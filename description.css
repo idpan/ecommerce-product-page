@@ -1,0 +1,128 @@
+main {
+  padding: 20px;
+  max-width: 27.8rem;
+}
+s {
+  color: var(--text-secondary-color);
+}
+
+.company-name {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+.payment-price > div:first-child {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.discount {
+  background-color: var(--secondary-color);
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+}
+.price__real {
+  font-size: 1.3rem;
+}
+.quantity-adjustment {
+  justify-content: space-between;
+  background-color: var(--background-secondary-color);
+}
+.quantity-product {
+  font-size: 1.1rem;
+}
+button.add-to-cart,
+.quantity-adjustment {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  max-width: 20rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+button.add-to-cart {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+}
+button.add-to-cart path {
+  fill: white;
+}
+button.add-to-cart svg {
+  transform: scale(0.9);
+  height: min-content;
+}
+/* text-styling */
+
+.company-name,
+.discount {
+  color: var(--primary-color);
+}
+h1.product__name,
+.company-name,
+.payment-price > *,
+.quantity-product,
+.add-to-cart div {
+  font-weight: var(--fw-bold);
+}
+p.product__description {
+  color: var(--text-secondary-color);
+}
+
+.price__actual,
+h1.product__name {
+  font-size: 2rem;
+}
+
+/* layout */
+section.description {
+  margin-bottom: 2rem;
+}
+h1.product__name {
+  margin-bottom: 1.2rem;
+}
+.payment-price {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 20rem;
+}
+.quantity-adjustment {
+  margin-bottom: 1rem;
+}
+
+span.price__actual {
+  margin-right: 1rem;
+}
+span.price__real {
+  display: inline-block;
+}
+
+@media (max-width: 375px) {
+  .payment-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 600px) {
+  h1.product__name {
+    font-size: 2.5rem;
+  }
+  .payment > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  .quantity-adjustment {
+    margin: 0;
+  }
+}
