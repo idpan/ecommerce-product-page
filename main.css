@@ -6,14 +6,14 @@
 }
 :root {
   font-size: 16px;
+  font-weight: 400;
   font-family: "Kumbh Sans", sans-serif;
   --fw-bold: 700;
-  --fw-normal: 400;
 
   --primary-color: hsl(26, 100%, 55%);
   --secondary-color: hsl(25, 100%, 94%);
   --text-primary-color: hsl(220, 13%, 13%);
-  --text-secondary-color: hsla(217, 9%, 45%, 0.507);
+  --text-secondary-color: hsl(219, 9%, 45%);
   --text-muted-color: hsl(220, 14%, 75%);
   --background-primary-color: hsl(0, 0%, 100%);
   --background-secondary-color: hsl(223, 64%, 98%);

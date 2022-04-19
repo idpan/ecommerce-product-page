@@ -69,7 +69,7 @@ button.add-to-cart svg {
 h1.product__name,
 .company-name,
 .payment-price > *,
-.quantity-product,
+main .quantity-product,
 .add-to-cart div {
   font-weight: var(--fw-bold);
 }
@@ -77,7 +77,7 @@ p.product__description {
   color: var(--text-secondary-color);
 }
 
-.price__actual,
+main .price__actual,
 h1.product__name {
   font-size: 2rem;
 }
@@ -98,7 +98,7 @@ h1.product__name {
   margin-bottom: 1rem;
 }
 
-span.price__actual {
+main span.price__actual {
   margin-right: 1rem;
 }
 span.price__real {
